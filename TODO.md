@@ -26,7 +26,7 @@
 - [x] Add comprehensive error handling
 
 ### Services
-- [x] Create OpenAI service for GPT-4 integration
+- [x] Create Gemini service for Gemini pro 2.0 integration
 - [x] Implement export service with multiple format support
 - [x] Add validation middleware for all requests
 
@@ -47,8 +47,8 @@
    - Test health endpoint: http://localhost:5000/health
    - Verify frontend loads: http://localhost:3000
 
-3. **Test OpenAI Integration**
-   - Add valid OpenAI API key
+3. **Test GeminiAPI Integration**
+   - Add valid Gemini API key
    - Test with sample Python code for class diagram
    - Verify Mermaid code generation
 
@@ -99,7 +99,7 @@
 
 The core application structure is complete with:
 - ✅ Full-stack React + Node.js setup
-- ✅ GPT-4 integration ready
+- ✅ Geminipro API integration ready
 - ✅ Mermaid.js diagram rendering
 - ✅ Multiple export formats
 - ✅ Comprehensive error handling
