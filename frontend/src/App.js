@@ -13,6 +13,8 @@ function App() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState('');
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
   const handleGenerateDiagram = async () => {
     if (!code.trim()) {
       setError('Please enter some code first');
@@ -23,7 +25,7 @@ function App() {
     setError('');
 
     try {
-      const response = await fetch('/api/generate-diagram', {
+      const response = await fetch(`${backendUrl}/api/generate-diagram`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,7 +54,7 @@ function App() {
     if (!mermaidCode) return;
 
     try {
-      const response = await fetch('/api/export', {
+      const response = await fetch(`${backendUrl}/api/export`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
