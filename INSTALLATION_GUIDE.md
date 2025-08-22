@@ -51,9 +51,9 @@ cd ../backend
 copy .env.example .env
 ```
 
-Edit `backend/.env` and add your Hugging Face API key:
+Edit `backend/.env` and add your Gemini API key:
 ```
-HF_API_KEY=your_huggingface_token_here
+GEMINI_API_KEY=your_GeminiAPI_token_here
 ```
 
 ### 5. Start the Application
