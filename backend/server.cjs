@@ -27,8 +27,20 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // CORS configuration
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://code-2-ai.vercel.app"
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps, curl, etc.)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      return callback(new Error('CORS not allowed for this origin'), false);
+    }
+    return callback(null, true);
+  },
   credentials: true
 }));
 
