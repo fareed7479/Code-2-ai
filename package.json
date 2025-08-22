@@ -1,0 +1,19 @@
+{
+  "name": "code-to-diagram-ai",
+  "version": "1.0.0",
+  "description": "AI-powered tool that converts source code to diagrams using Hugging Face and Mermaid.js",
+  "scripts": {
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "keywords": ["ai", "diagram", "code", "huggingface", "mermaid", "uml", "mistral"],
+  "author": "Code-to-Diagram AI Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
