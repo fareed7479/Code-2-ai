@@ -10,7 +10,7 @@
     "build": "cd frontend && npm run build",
     "start": "cd backend && npm start"
   },
-  "keywords": ["ai", "diagram", "code", "huggingface", "mermaid", "uml", "mistral"],
+  "keywords": ["ai", "diagram", "code", "gemini", "mermaid", "uml", "mistral"],
   "author": "Code-to-Diagram AI Team",
   "license": "MIT",
   "devDependencies": {
